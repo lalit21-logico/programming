@@ -1,0 +1,8 @@
+getFreePhysicalMemorySize = 2524377088
+getTotalPhysicalMemorySize = 8500908032
+getFreeSwapSpaceSize = 3011567616
+getSystemCpuLoad = -1.0
+getTotalSwapSpaceSize = 10502639616
+getProcessCpuLoad = -1.0
+getProcessCpuTime = 375000000
+getCommittedVirtualMemorySize = 175480832

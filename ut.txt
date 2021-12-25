@@ -1,0 +1,10 @@
+
+ MEMORY USage  
+
+total physical memory : 8107MB 
+total free physical memory : 3058MB
+
+ CPU USAGE 
+
+Starting Test with 8 CPUs and random number:921595492
+CPU USAGE : 12.0 % 

@@ -1,0 +1,7 @@
+
+4::Wed Feb 12 18:29:51 IST 2020   CPU USAGE : 11.0 %    total free physical memory : 2GB
+5::Wed Feb 12 18:30:22 IST 2020   CPU USAGE : 12.0 %    total free physical memory : 2GB
+6::Wed Feb 12 18:30:54 IST 2020   CPU USAGE : 11.0 %    total free physical memory : 4GB
+7::Wed Feb 12 18:31:24 IST 2020   CPU USAGE : 11.0 %    total free physical memory : 3GB
+8::Wed Feb 12 18:31:55 IST 2020   CPU USAGE : 12.0 %    total free physical memory : 4GB
+9::Wed Feb 12 18:32:26 IST 2020   CPU USAGE : 12.0 %    total free physical memory : 4GB
