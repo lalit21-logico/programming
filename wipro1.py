@@ -851,3 +851,115 @@ from typing import Pattern
 #                 return (x+y)/2
 #             else:
 #                 return y
+
+
+# def reverse(self, x: int) -> int:
+#     st = str(x)
+#     if st[0] == "+" or st[0] =="-":
+#         x= int(st[0]+st[:0:-1])
+#     else:
+#         x= int(st[::-1])
+#     if x <= -2147483648 or x >= 2147483647:
+#         return 0
+#     else:
+#         return x
+
+
+# def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
+#     ptr =head
+#     lis= []
+#     while ptr != None:
+#         lis.append(ptr)
+#         ptr = ptr.next
+#     return lis[len(lis)//2]
+
+# def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+#     fast = slow = head
+#     for i in range(n):
+#         fast = fast.next
+#     if fast == None:
+#         return head.next
+
+#     while fast.next:
+#         slow = slow.next
+#         fast = fast.next
+
+#     if n == 1:
+#         slow.next = None
+#     else:
+#         slow.next = slow.next.next
+#     return head
+
+# def maxArea(self, height: List[int]) -> int:
+#     result= 0
+#     start=0
+#     end= len(height)-1
+#     while start < end:
+#         result = max(result, (end-start)*(min(height[start],height[end])))
+#         if height[start]<=height[end]:
+#             start +=1
+#         else:
+#             end-=1
+#     return result
+
+# Python 3 program to find longest subsequence
+# of the form 0*1*0* in a binary string
+
+# Returns length of the longest subsequence
+# of the form 0*1*0*
+# def longestSubseq(s):
+#     n = len(s)
+#     pre_count_0 = [0 for i in range(n + 2)]
+#     pre_count_1 = [0 for i in range(n + 1)]
+#     post_count_0 = [0 for i in range(n + 2)]
+#     pre_count_0[0] = 0
+#     post_count_0[n + 1] = 0
+#     pre_count_1[0] = 0
+#     for j in range(1, n + 1):
+#         pre_count_0[j] = pre_count_0[j - 1]
+#         pre_count_1[j] = pre_count_1[j - 1]
+#         post_count_0[n - j + 1] = post_count_0[n - j + 2]
+
+#         if (s[j - 1] == '0'):
+#             pre_count_0[j] += 1
+#         else:
+#             pre_count_1[j] += 1
+#         if (s[n - j] == '0'):
+#             post_count_0[n - j + 1] += 1
+
+#     # string is made up of all 0s or all 1s
+#     if (pre_count_0[n] == n or
+#             pre_count_0[n] == 0):
+#         return n
+
+#     # Compute result using precomputed values
+#     ans = 0
+#     for i in range(1, n + 1):
+#         for j in range(i, n + 1, 1):
+#             ans = max(pre_count_0[i - 1] +
+#                       pre_count_1[j] -
+#                       pre_count_1[i - 1] +
+#                       post_count_0[j + 1], ans)
+#     return ans
+
+
+# # Driver Code
+# if __name__ == '__main__':
+#     s = "0101"
+#     print(longestSubseq(s))
+
+# This code is contributed by
+# Surendra_Gangwar
+
+# if __name__ == '__main__':
+#     n = int(input())+1
+#     lis = list(map(int, input().split()))
+#     print((n*(n+1)//2)-sum(lis))
+
+
+lis = list(map(int, input().split()))
+runs = lis[0]
+balls = lis[1]
+maxs = min(runs // 6 + min(1, runs % 6), balls)
+mins = max((runs - (balls*4)) // 2 + max(0, (runs - (balls*4)) % 2), 0)
+print(maxs-mins)
